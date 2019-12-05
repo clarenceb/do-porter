@@ -3,8 +3,8 @@
 name: spring-music
 version: 0.7.0
 description: "Run the Spring Music Service on Kubernetes and Digital Ocean PostgreSQL"
-invocationImage: jeremyrickard/porter-do:v0.7.0
-tag: jeremyrickard/porter-do-bundle:v0.7.0
+invocationImage: clarenceb/porter-do:v0.7.0
+tag: clarenceb/porter-do-bundle:v0.7.0
 
 dockerfile: Dockerfile.tmpl
 
@@ -26,7 +26,7 @@ parameters:
 - name: region
   description: "Region to create Database and DO Space"
   type: string
-  default: "nyc3"
+  default: "sfo2"
 - name: space_name
   description: "Name for DO Space"
   type: string
@@ -171,6 +171,7 @@ upgrade:
       description: "Wait for IP"
       command: "bash"
       arguments:
+        - "-x"
         - "waitForIP.sh"
         - "spring-music"
         - "{{bundle.parameters.namespace}}"
