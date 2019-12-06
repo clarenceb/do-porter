@@ -26,6 +26,19 @@ porter build
 
 ```sh
 porter credentials generate
+
+porter credentials generate
+Generating new credential spring-music from bundle spring-music
+==> 4 credentials required for bundle spring-music
+? How would you like to set credential "do_access_token" environment variable
+? Enter the environment variable that will be used to set credential "do_access_token" DO_ACCESS_KEY
+? How would you like to set credential "do_spaces_key" environment variable
+? Enter the environment variable that will be used to set credential "do_spaces_key" DO_SPACES_KEY
+? How would you like to set credential "do_spaces_secret" environment variable
+? Enter the environment variable that will be used to set credential "do_spaces_secret" DO_SPACES_SECRET
+? How would you like to set credential "kubeconfig" file path
+? Enter the path that will be used to set credential "kubeconfig" <you-path-to>/kubeconfig
+Saving credential to /home/<your-account>/.porter/credentials/spring-music.yaml
 ```
 
 ### Install the bundle
