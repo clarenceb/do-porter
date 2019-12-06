@@ -8,7 +8,7 @@ Steps
 * Create Digital Ocean API token and Spaces access key
 
 ```sh
-cp source ./do-access.env.template ./do-access.env
+cp ./do-access.env.template ./do-access.env
 # Populate the Digital Ocean values in `do-access.env`
 source ./do-access.env
 az aks get-credentials -g <resource-group> -n <cluster> -f ./kubeconfig
@@ -27,7 +27,6 @@ porter build
 ```sh
 porter credentials generate
 
-porter credentials generate
 Generating new credential spring-music from bundle spring-music
 ==> 4 credentials required for bundle spring-music
 ? How would you like to set credential "do_access_token" environment variable
